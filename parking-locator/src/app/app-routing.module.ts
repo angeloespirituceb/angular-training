@@ -8,6 +8,11 @@ const routes: Routes = [
       import("./analytics/analytics.module").then(m => m.AnalyticsModule)
   },
   {
+    path: "floor-plan",
+    loadChildren: () =>
+      import("./floor-plan/floor-plan.module").then(m => m.FloorPlanModule)
+  },
+  {
     path: "**",
     loadChildren: () =>
       import("./dashboard/dashboard.module").then(m => m.DashboardModule)
